@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-
+// eslint-disable-next-line no-undef
 var _uuid = _interopRequireDefault(require("uuid"));
 
 function _interopRequireDefault(obj) {
