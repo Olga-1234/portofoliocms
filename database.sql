@@ -1,17 +1,17 @@
 
-CREATE DATABASE IF NOT EXISTS Mes_projets_kda DEFAULT CHARACTER SET utf8 ;
-USE Mes_projets_kda ; 
+CREATE DATABASE IF NOT EXISTS Mes_projects_kda DEFAULT CHARACTER SET utf8 ;
+USE Mes_projects_kda ; 
 
 
-CREATE TABLE IF NOT EXISTS projets
+CREATE TABLE IF NOT EXISTS projects
 (
-  id_projet INT NOT NULL AUTO_INCREMENT,
-  nom_projet VARCHAR(255) NOT NULL,
-  description_projet VARCHAR(255) NOT NULL,
-  url_image_projet VARCHAR(255) NULL,
-  alt_image_projet VARCHAR(255) NULL,
-  url_github_projet VARCHAR(255),
-  PRIMARY KEY (id_projet)
+  id_project INT NOT NULL AUTO_INCREMENT,
+  nom_project VARCHAR(255) NOT NULL,
+  description_project VARCHAR(255) NOT NULL,
+  url_image_project VARCHAR(255) NULL,
+  alt_image_project VARCHAR(255) NULL,
+  url_github_project VARCHAR(255),
+  PRIMARY KEY (id_project)
 );
 
 CREATE TABLE IF NOT EXISTS technologies
@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS technologies
 
 );
 
-CREATE TABLE IF NOT EXISTS projet_tech
+CREATE TABLE IF NOT EXISTS project_tech
 (
-    id_projet_tech INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    id_projet INT  NOT NULL,
+    id_project_tech INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    id_project INT  NOT NULL,
     id_technologie INT NOT NULL,
-    PRIMARY KEY (id_projet_tech),
-    CONSTRAINT fk_projet FOREIGN KEY (id_projet) REFERENCES projets (id_projet) ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id_project_tech),
+    CONSTRAINT fk_project FOREIGN KEY (id_project) REFERENCES projects (id_project) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT fk_technologies FOREIGN KEY (id_technologie) REFERENCES technologies (id_technologie) ON DELETE CASCADE ON UPDATE CASCADE
 );
