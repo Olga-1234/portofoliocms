@@ -1,4 +1,5 @@
-const { request, response } = require("express");
+/* eslint-disable no-undef */
+
 const project = require("./../models/projects");
 
 module.exports = {
