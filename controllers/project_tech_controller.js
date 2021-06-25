@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
-const project_techn = require("./../models/project_tech");
+const project_techn = require("../models/project_tech");
 module.exports = {
-  
   getProjectTech: (request, response) => {
     project_techn.getById(request.con, request.params.id, (error, result) => {
       if (error) {
