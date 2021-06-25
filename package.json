@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "develop": "nodemon index.js",
+    "dev": "nodemon index.js",
     "build": "babel src --out-dir dist",
     "test": "jest --coverage",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
@@ -33,6 +33,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
   }
